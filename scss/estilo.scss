@@ -405,33 +405,33 @@ width: 41rem !important;
 }
 }
     @media (max-width: 320px){
-        .pie{
-            font-size: 15px;
-            text-align: center;
+      .logo{
+        height: 50px;
+        width: 100px;
+      }  
+      .pie{
+        font-size: 13px;
+        text-align: center;
         }
+      .materpel{
+        background-repeat: no-repeat;
+        background-size: 105%;
+        height: 128px !important;
+        }
+      .materpel__eslogan{
+        font-size: 13px;
+        margin-left: 0px !important;
+        margin-right: 0px !important;
+        margin-top: 80px !important;
+        margin-bottom: 20px !important;
+        text-align: center;
+        }
+      .card{
+        width: 280px !important;
+        margin-left: 20px !important;
+        }
+      }
 
-        .gridImagenTexto{ 
-            padding: 5px;
-            display: grid;
-            grid-template-columns: 100%;
-            justify-content: stretch;
-            align-items:stretch;
-        }
-        
-        .imgGrid{
-            width: 200px;   
-            height: 200px;
-        }
-        
-        .menu{
-                width: 80%;
-                border-width: 80%;
-                display:grid;
-                justify-content: space-between;
-                align-items: center;
-                text-align: center;
-            }
-        }
 
         @media (max-width: 1024px){
             .pie{
