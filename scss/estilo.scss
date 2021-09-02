@@ -26,7 +26,10 @@ $subtitulos:(
     align-items: center;
     color: snow;
 }
-
+.card{
+  width: 50rem !important;
+  height: 200px !important;
+}
 .contacto{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -351,28 +354,14 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
 }
 
 @media (max-width: 768px){
-.pie{
-    font-size: 15px;
-}
-
-.imgGrid{
-    width: 200px;   
-    height: 200px;
-}
-
-.menu{
-    text-align: center;
-        border: solid 3px gray;
-        font-size: 15px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-around;
+    .logo{
+      margin-right: 10px;
+      margin-left: 10px;
+      width: 165px;
+      height: 95px;
     }
-}
-
-@media (max-width: 768px){
-    .pie{
+  
+  .pie{
         font-size: 15px;
     }
     
@@ -381,16 +370,40 @@ input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
         height: 200px;
     }
     
-    .menu{
-            text-align: center;
-            font-size: 15px;
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: space-around;
-        }
-    }
+    .materpel{
+            background-repeat: no-repeat;
+            background-size: 105%;
+    }  
 
+.materpel__eslogan{
+  font-size: 30px;
+  margin-right: 130px;
+  margin-left: 150px;
+  margin-bottom: 100px;
+  margin-top:225px;
+  text-align: center;
+}
+
+.card{
+  margin-left: 50px;
+  margin-right: 53px;
+height: 255px !important;
+width: 41rem !important;
+
+.card-title{
+  font-size: 23.5px;
+}
+.card-subtitle{
+  font-size: 22px;
+}
+.card-link{
+  font-size: 17px;
+}
+.card-text{
+  font-size: 20px;
+}
+}
+}
     @media (max-width: 320px){
         .pie{
             font-size: 15px;
