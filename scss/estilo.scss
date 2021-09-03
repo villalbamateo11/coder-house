@@ -149,9 +149,13 @@ body{
 }
 
 .imagen__destacada{
-width: 800px;
-height: 400px;
-margin-left: 250px;
+width: 450px;
+height: 300px;
+margin-left: 55px;
+}
+.textoFoto{
+  display: flex;
+  justify-content: space-between;
 }
 
 hr {
