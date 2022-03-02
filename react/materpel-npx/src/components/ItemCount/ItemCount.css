@@ -1,0 +1,17 @@
+.restar{
+    background-color: red;
+    color: white;
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.sumar{
+    background-color: green;
+    color: white;
+    height: 30px;
+    width: 30px;
+    margin-left: 10px;
+    font-size: 20px;
+}
