@@ -15,7 +15,7 @@ function ItemCount({ stock, initial, onAdd}) {
 
     return (
     <div>
-        <div>Rolls de salmon</div>
+        <div>Toneladas</div>
         <div>En stock:{ stock }</div>
         <div>
             <button disabled={count===initial} onClick={ restar } className="restar">-</button>
