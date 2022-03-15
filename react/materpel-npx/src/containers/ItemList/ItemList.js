@@ -3,7 +3,6 @@ import Item from "./Item"
 import { getFetch } from '../../helpers/getFetch';
 import './ItemList.css';
 
-
 function ItemList() {
 
     const [combos, setCombos] = useState([])
@@ -25,7 +24,7 @@ useEffect(() => {
                 {   loading ? <h1 className="loading">Cargando...</h1>
                             :
                             combos.map((prod) => 
-                                <Item items={ prod }  />
+                                <Item key={ prod.id } items={ prod }  />
                             )
                 }
             </>

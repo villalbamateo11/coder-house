@@ -3,9 +3,9 @@ import './Item.css';
 
 function Item({ items }) {
   return (
-    <div key={ items.id } className="cards">
+    <div className="cards">
         <div className="cards__header">
-        <img src={ items.pictureURL } alt='' className="cards__image"></img>
+            <img src={ items.pictureURL } alt='' className="cards__image"></img>
         </div>
         <div className="cards__body">
             <p className="cards__title">{ items.title }</p>
