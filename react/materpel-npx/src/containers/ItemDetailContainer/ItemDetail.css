@@ -1,0 +1,19 @@
+.detalle{
+    margin-top: 30px;
+    margin-left: 350px;
+    margin-right: 350px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    align-content: center;
+}
+
+.detalle__img{
+    height: 300px;
+    width: 400px;
+}
+
+.detalle__datos{
+    display: grid;
+    grid-template-rows: 50% 50%;
+}

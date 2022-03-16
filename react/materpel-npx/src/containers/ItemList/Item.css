@@ -3,7 +3,7 @@
     border-radius: 10px;
     width: 100%;
     border-width: 1px;
-    background-color: #00379d;
+    background-color: #067db4;
 }
 
 .cards__header{
@@ -19,7 +19,8 @@
 }
 
 .cards__body{
-    background-color: #51bada;
+    background-color: #0794be;
+    color: black;
 }
 
 .cards__title{
@@ -37,9 +38,21 @@
 .cards__footer{
     border-top-style: solid;
     border-width: 1px;
-    background-color: #ffffff;
+    background-color: #00569d;
+    color: black;
+    border-radius: 5px;
 }
 
 .cards__stock{
     font-size: 16px;
+}
+
+.cards__button{
+    background-color: #ffffff;
+    border-color: black;
+    border-radius: 5px;
+    height: 30px;
+    width: 100px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
