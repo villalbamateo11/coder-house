@@ -6,19 +6,23 @@ import { useParams } from 'react-router-dom';
 
 
 function ItemDetailContainer() {
-    const [loading, setLoading] = useState(false)
+    const [loading, setLoading] = useState(true)
     const [prod, setProd] = useState([])
     const { detalleId } = useParams()
   
     
     useEffect(() => {
-      if (detalleId) {
-      getItem( )
-        .then(res => setProd(res.find(product => product.id === detalleId)))
-        .catch(err => console.log(err)) 
-      } else {
-        setLoading(true)
-      }
+      getItem()
+        .then((res) =>{
+          detalleId?
+           setProd(res.find( (product)=> product.id === detalleId))
+          :
+          setProd(res)
+        })
+        .catch((err) => console.log(err)) 
+        .finally(()=>{
+        setLoading(false)
+      })
       }, [detalleId])
   
     return (

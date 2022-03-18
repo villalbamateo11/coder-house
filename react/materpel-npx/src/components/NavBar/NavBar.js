@@ -13,13 +13,9 @@ function NavBar() {
       </NavLink>
       <div className="NavBar__menu">
         <div>
-          <NavLink to='categoria/ubicacion'><button className='NavBar__button'>Ubicación</button></NavLink>
-          <NavLink to='categoria/productos'><button className='NavBar__button'>Productos</button></NavLink>
-          <NavLink to='categoria/sobrenosotros'><button className='NavBar__button'>Sobre Nosotros</button></NavLink>
-          <NavLink to='categoria/preguntasfrecuentes'><button className='NavBar__button'>Preguntas Frecuentes</button></NavLink>
-          
-          
-          
+          <NavLink to='categoria/carton'><button className='NavBarbutton'>Carton</button></NavLink>
+          <NavLink to='categoria/planilla'><button className='NavBarbutton'>Planilla</button></NavLink>
+          <NavLink to='categoria/papel'><button className='NavBarbutton'>Papel</button></NavLink>
         </div>
         
       </div>

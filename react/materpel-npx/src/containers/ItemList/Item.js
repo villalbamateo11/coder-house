@@ -13,7 +13,7 @@ function Item({ items }) {
             <p className="cards__price">Precio: ${ items.price }</p>
         </div> 
         <div className="cards__footer">
-          <Link to={`detalle/${items.id}`}>
+          <Link to={`/detalle/${items.id}`}>
             <button className="cards__button" >Detalles</button>
           </Link>
         </div>   

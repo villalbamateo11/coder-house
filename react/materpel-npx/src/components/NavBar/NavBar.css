@@ -1,14 +1,17 @@
 .NavBar{
-    background-color: #33a3e4;
-    display: flex;
-    flex-direction: column;
+    background-color: #2e91d3;
+    display: grid;
+    grid-template-columns: 33% 34% 33%;
     align-items: center;
     height: 100%;
 }
 
 .NavBarbutton{
-    background-color: #ffffff;
+    background-color: #000000;
+    color:azure;
     border-color: rgb(50, 177, 177);
+    width: 100px;
+    height: 50px;
     margin-left: 6px;
     margin-right: 6px;
     margin-top: 7px;

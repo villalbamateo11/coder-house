@@ -12,8 +12,8 @@ function App() {
       <div>
       <NavBar />
       <Routes>
-        <Route path='/' element={<ItemListContainer productos='Productos' especiales='Rolls Especiales' comb='Combos'/>} />
-        <Route path='/categoria/:categoriaId' element={<ItemListContainer productos='Productos' especiales='Rolls Especiales' comb='Combos'/>} />
+        <Route path='/' element={<ItemListContainer planilla='Planila Blanca' carton='Carton' papel='Papel'/>} />
+        <Route path='/categoria/:categoriaId' element={<ItemListContainer carton='Carton' especiales='Carton' papel='Papel'/>} />
         <Route path='/detalle/:detalleId' element={<ItemDetailContainer />} />
         <Route path='/*' element={<Navigate to='/' replace />} />
         <Route path='/cart' element={<Cart />} />
