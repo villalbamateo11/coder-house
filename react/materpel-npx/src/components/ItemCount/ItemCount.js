@@ -1,16 +1,27 @@
 import { useState } from 'react'
 import './ItemCount.css';
+import { Link } from "react-router-dom";
 
-function ItemCount({ stock, initial, onAdd}) {
+const InputCount= ()=> {
+
+    return (
+        <Link to='/Cart' >
+            <button>Ir al carrito</button>
+        </Link>
+    )
+  }
   
-    const [count, setCount] = useState(initial)
+  const ButtonCount= ({handleInter})=> {
+      return <button onClick={handleInter}>Agregar al carrito</button>
+  
+  }
 
-    const sumar = ()=> {
-        setCount(count+1)
-    }
+function ItemCount({ count, stock, initial, sumar, restar}) {
 
-    const restar = ()=> {
-        setCount(count-1)
+    const [inputType, setInputType ] = useState('button')
+
+    const handleInter=()=>{
+      setInputType('input')
     }
 
     return (
@@ -20,9 +31,12 @@ function ItemCount({ stock, initial, onAdd}) {
             <label className="count" >{ count }</label>
             <button disabled={count===stock} onClick={ sumar } className="sumar">+</button>
         </div>
-        <div>
-            <button onClick={ () => onAdd(count)}>Agregar al carrito</button>
-        </div>
+        {
+                inputType === 'button' ? 
+                    <ButtonCount handleInter={handleInter} />
+                : 
+                    <InputCount />
+               }
     </div>
     
   )

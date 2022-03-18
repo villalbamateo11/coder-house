@@ -1,11 +1,20 @@
 import ItemCount from '../../components/ItemCount/ItemCount';
 import './ItemDetail.css';
+import { useState } from 'react'
+
 
 const ItemDetail = ({ prod }) => {
 
-  const onAdd = (count) =>{
-    console.log(`Se añadio al carrito ${count} productos`)
-}
+  const [count, setCount] = useState(1)
+
+    const sumar = ()=> {
+        setCount(count+1)
+    }
+
+    const restar = ()=> {
+        setCount(count-1)
+    }
+
 
       return (
         <div className='detalle'>
@@ -19,10 +28,10 @@ const ItemDetail = ({ prod }) => {
               <p>${prod.price}</p>
             </div>
             <div>
-              <ItemCount stock={prod.stock} initial={1} onAdd={onAdd}/>
+              <ItemCount count={count} sumar={sumar} restar={restar} stock={prod.stock} initial={1} />
             </div>
           </div>
-          
+         
         </div>
         
       )
