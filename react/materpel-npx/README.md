@@ -4,4 +4,6 @@ Esta página tiene como fin la compra y venta de los productos recuperados, y as
 
 ## Available Scripts
 
+![image](https://github.com/villalbamateo11/coder-house/blob/main/react/materpel-npx/src/imagenes/materpel.gif)
+
 ### npm install react-router-dom
