@@ -8,7 +8,7 @@ import { Link } from 'react-router-dom';
 const ItemDetail = ({ prod }) => {
     const [count, setCount] = useState(1)
 
-    const { addItem, cartList, IsInCart } = useCartContext()
+    const { addItem, cartList } = useCartContext()
 
     const sumar = ()=> {
         setCount(count+1)
@@ -39,12 +39,7 @@ const ItemDetail = ({ prod }) => {
               <p>${prod.price}</p>
             </div>
             <div>
-              {
-                IsInCart(prod.id)?
-                <Link to='/Cart'><button className="detalle__button">Ir al carrito</button></Link>
-                :
                 <ItemCount count={count} sumar={sumar} restar={restar} stock={prod.stock} initial={1} onAdd={onAdd}/>
-              }
               <Link to='/'>
                 <button className='detalle__button'>Volver a productos</button>
               </Link>

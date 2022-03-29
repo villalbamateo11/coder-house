@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 const InputCount= ()=> {
 
     return (
-        <Link to='/Cart' >
+        <Link to='/cart' >
             <button>Ir al carrito</button>
         </Link>
     )

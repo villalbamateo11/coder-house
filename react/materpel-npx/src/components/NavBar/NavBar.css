@@ -27,4 +27,25 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    grid-template-columns: 20% 80%;
+    align-items: center;
+}
+
+.cartWidget{
+    margin-left: 400px;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.cartProducts{
+    margin-right: 5px;
+    color: black;
+    background-color: green;
+    width: 25px;
+    height: 25px;
+    border-radius: 15px;
+}
+
+.number{
+    margin-left: 5px;
 }
