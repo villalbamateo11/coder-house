@@ -6,7 +6,7 @@ function Item({ items }) {
   return (
     <div className="cards">
         <div className="cards__header">
-            <img src={ items.pictureURL } alt='' className="cards__image"></img>
+            <img src={ items.image } alt='' className="cards__image"></img>
         </div>
         <div className="cards__body">
             <p className="cards__title">{ items.title }</p>

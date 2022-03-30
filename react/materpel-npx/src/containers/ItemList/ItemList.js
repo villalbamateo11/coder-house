@@ -1,36 +1,36 @@
 import { useState, useEffect } from "react";
 import Item from "./Item"
-import { getFetch } from '../../helpers/getFetch';
 import './ItemList.css';
 import { useParams } from "react-router-dom";
+import { getFirestore, collection, getDocs, where, query } from "firebase/firestore";
 
 
 function ItemList() {
 
     const [combos, setCombos] = useState([])
     const [loading, setLoading] = useState(true)
-    const { categoriaId } = useParams()
+    const { categoryId } = useParams()
 
-useEffect(() => {
-
-    if (categoriaId) {
-        getFetch
-        .then((respuesta)=> {
-            return respuesta
-        })
-        .then((resp) => setCombos(resp.filter(prod => prod.categoria === categoriaId)))
-            .catch(err => console.log(err))
-            .finally(()=> setLoading(false))
+    useEffect(() => {
+    const db = getFirestore()
+    if (categoryId) {
+        const queryCollection = collection(db, 'items')
+        const queryFilter = query( queryCollection, where('categoryId', '==', categoryId) )
+        getDocs(queryFilter)
+        .then(resp => setCombos( resp.docs.map(item => ({ id: item.id, ...item.data()})) ))
+        .catch(err => console.log(err))
+        .finally(()=> setLoading(false))
     } else {
-        getFetch
-        .then((respuesta)=> {
-            return respuesta
-        })
-        .then((resp) => setCombos(resp))
+        const queryCollection = collection(db, 'items')
+        getDocs(queryCollection)
+        .then(resp => setCombos( resp.docs.map(item => ({ id: item.id, ...item.data()})) ))
         .catch(err => console.log(err))
         .finally(()=> setLoading(false))
     }
-    }, [categoriaId])
+
+    }, [categoryId])
+
+    
 
   return (
       <div className="ItemList">

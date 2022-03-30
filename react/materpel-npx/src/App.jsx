@@ -13,8 +13,8 @@ function App() {
       <BrowserRouter>
       <NavBar />
       <Routes>
-        <Route path='/' element={<ItemListContainer planilla='Planila Blanca' carton='Carton' papel='Papel'/>} />
-        <Route path='/categoria/:categoriaId' element={<ItemListContainer carton='Carton' papel='Papel'/>} />
+      <Route path='/' element={<ItemListContainer />} />
+      <Route path='/category/:categoryId' element={<ItemListContainer />} />
         <Route path='/detalle/:detalleId' element={<ItemDetailContainer />} />
         <Route path='/*' element={<Navigate to='/' replace />} />
         <Route path='/cart' element={<Cart />} />

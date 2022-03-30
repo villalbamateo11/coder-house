@@ -19,7 +19,6 @@ const ItemDetail = ({ prod }) => {
     }
 
     
-
     const onAdd = count =>{
       console.log(`Agregaste ${count} productos`)
       addItem({...prod, cantidad: count})
@@ -29,7 +28,7 @@ const ItemDetail = ({ prod }) => {
       return (
         <div className='detalle'>
           <div>
-            <img  className='detalle__img' src={prod.pictureURL} alt={prod.title}></img>
+            <img  className='detalle__img' src={prod.image} alt={prod.title}></img>
           </div>
           <div className='detalle__datos'>
             <div>
@@ -38,7 +37,7 @@ const ItemDetail = ({ prod }) => {
               <p>En stock: {prod.stock}</p>
               <p>${prod.price}</p>
             </div>
-            <div>
+            <div className='ItemCount'>
                 <ItemCount count={count} sumar={sumar} restar={restar} stock={prod.stock} initial={1} onAdd={onAdd}/>
               <Link to='/'>
                 <button className='detalle__button'>Volver a productos</button>
