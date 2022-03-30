@@ -1,0 +1,42 @@
+.cart{
+    margin-top: 30px;
+    margin-left: 350px;
+    margin-right: 350px;
+    width: 50%;
+    display: grid;
+    grid-template-columns: 50% 40% 10%;
+    align-content: center;
+    border-color: #ffffff;
+    border-radius: 5px;
+    border-style: solid;
+
+}
+
+.cart__img{
+    height: 250px;
+    width: 350px;
+}
+
+.cart__button{
+    background-color: #1a60af;
+    border-color: rgb(0, 0, 0);
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-width: 3px;
+    border-radius: 5px;
+}
+
+.trashButton{
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.alerta{
+    color: red;
+}

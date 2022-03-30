@@ -1,0 +1,35 @@
+.detalle{
+    margin-top: 30px;
+    margin-left: 350px;
+    margin-right: 350px;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 40% 40%;
+    align-content: center;
+}
+
+.detalle__img{
+    height: 300px;
+    width: 400px;
+}
+
+.detalle__datos{
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+
+.detalle__button{
+    background-color: #188cb9;
+    border-color: rgb(0, 0, 0);
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    border-width: 3px;
+    border-radius: 5px;
+}
+
+.ItemCount{
+    margin-top: 30px;
+} 
