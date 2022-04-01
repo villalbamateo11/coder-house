@@ -9,3 +9,7 @@ Esta página tiene como fin la compra y venta de los productos recuperados, y as
 ### `npm install react-router-dom`
 
 ### `npm install react-icons`
+
+Instala una libreria de iconos
+
+### `npm install firebase`

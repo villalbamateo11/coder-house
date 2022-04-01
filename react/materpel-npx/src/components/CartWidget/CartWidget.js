@@ -1,5 +1,7 @@
 import React from 'react'
 import './CartWidget.css';
+import '../../context/cartContext'
+
 
 function CartWidget() {
   return (
