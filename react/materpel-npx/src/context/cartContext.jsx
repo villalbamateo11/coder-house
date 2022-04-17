@@ -5,11 +5,11 @@ import {createContext,useState, useContext} from 'react'
  export const useCartContext = () => useContext(CartContext)
 
 function CartContextProvider({children}) {
-    
+
     const [cartList, setCartList] = useState([])
 
-    
     const addItem = (prod) => {
+
         const index = cartList.findIndex((i) => i.id === prod.id);
 
         if (index > -1) {
@@ -26,7 +26,7 @@ function CartContextProvider({children}) {
         }
     }
 
-    function deleItemCart(id) {
+      function deleItemCart(id) {
         setCartList(cartList.filter((prod) => prod.id !== id));
       }
 

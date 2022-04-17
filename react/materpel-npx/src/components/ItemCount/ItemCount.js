@@ -6,22 +6,23 @@ const InputCount= ()=> {
 
     return (
         <Link to='/cart' >
-            <button>Ir al carrito</button>
+            <button className="button">Ir al carrito</button>
         </Link>
     )
   }
-  
-  const ButtonCount= ({handleInter})=> {
-      return <button onClick={handleInter}>Agregar al carrito</button>
-  
-  }
 
-function ItemCount({ count, stock, initial, sumar, restar}) {
+
+function ItemCount({ count, stock, initial, sumar, restar, onAdd}) {
 
     const [inputType, setInputType ] = useState('button')
 
     const handleInter=()=>{
       setInputType('input')
+    }
+
+    const agregarCarrito = ()=>{
+        onAdd(count)
+        handleInter(handleInter)
     }
 
     return (
@@ -33,12 +34,12 @@ function ItemCount({ count, stock, initial, sumar, restar}) {
         </div>
         {
                 inputType === 'button' ? 
-                    <ButtonCount handleInter={handleInter} />
+                    <button onClick={agregarCarrito} className="button">Agregar al carrito</button>
                 : 
                     <InputCount />
                }
     </div>
-    
+
   )
 }
 
